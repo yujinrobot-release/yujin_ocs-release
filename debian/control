@@ -1,0 +1,12 @@
+Source: ros-groovy-yujin-ocs
+Section: misc
+Priority: extra
+Maintainer: Jorge Santos Simon <jorge@rnd.yujinrobot.com>
+Build-Depends: debhelper (>= 7.0.50~), 
+Homepage: http://ros.org/wiki/yujin_ocs
+Standards-Version: 3.9.2
+
+Package: ros-groovy-yujin-ocs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-groovy-yocs-controllers,ros-groovy-yocs-velocity-smoother,ros-groovy-cmd-vel-mux
+Description: Yujin Robot's open-source control software
