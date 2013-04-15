@@ -1,3 +1,3 @@
 [git-buildpackage]
-upstream-branch=release/yujin_ocs/0.2.2
+upstream-branch=@(release_tag)
 upstream-tree=branch
