@@ -1,0 +1,12 @@
+Source: ros-hydro-cmd-vel-mux
+Section: misc
+Priority: extra
+Maintainer: "Jorge Santos Simon <jorge@yujinrobot.com>"
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-catkin, ros-hydro-dynamic-reconfigure, ros-hydro-geometry-msgs, ros-hydro-nodelet, ros-hydro-pluginlib, ros-hydro-roscpp, yaml-cpp
+Homepage: http://ros.org/wiki/cmd_vel_mux
+Standards-Version: 3.9.2
+
+Package: ros-hydro-cmd-vel-mux
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-dynamic-reconfigure, ros-hydro-geometry-msgs, ros-hydro-nodelet, ros-hydro-pluginlib, ros-hydro-roscpp, yaml-cpp
+Description: A multiplexer for command velocity inputs. Arbitrates incoming cmd_vel messages from several topics, allowing one topic at a time to command the robot, based on priorities. It also deallocates current allowed topic if no messages are received after a configured timeout. All topics, together with their priority and timeout are configured through a YAML file, that can be reload at runtime.
