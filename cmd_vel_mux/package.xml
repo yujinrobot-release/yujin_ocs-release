@@ -1,0 +1,34 @@
+<package>
+  <name>cmd_vel_mux</name>
+  <version>0.3.0</version>
+  <description>
+     A multiplexer for command velocity inputs. Arbitrates incoming cmd_vel messages from several topics,
+     allowing one topic at a time to command the robot, based on priorities. It also deallocates current
+     allowed topic if no messages are received after a configured timeout. All topics, together with their
+     priority and timeout are configured through a YAML file, that can be reload at runtime.
+  </description>
+  <author email="jorge@yujinrobot.com">Jorge Santos Simon</author>
+  <maintainer email="jorge@yujinrobot.com">Jorge Santos Simon</maintainer>
+  <license>BSD</license>
+  <url>http://ros.org/wiki/cmd_vel_mux</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>nodelet</build_depend>
+  <build_depend>dynamic_reconfigure</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>yaml-cpp</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>pluginlib</run_depend>
+  <run_depend>nodelet</run_depend>
+  <run_depend>dynamic_reconfigure</run_depend>
+  <run_depend>yaml-cpp</run_depend>
+
+  <export>
+    <nodelet plugin="${prefix}/plugins/nodelet_plugins.xml" />
+  </export>
+</package>
