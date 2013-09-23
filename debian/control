@@ -1,0 +1,12 @@
+Source: ros-hydro-yocs-diff-drive-pose-controller
+Section: misc
+Priority: extra
+Maintainer: Marcus Liebhardt <marcus.liebhardt@yujinrobot.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-catkin, ros-hydro-ecl-threads, ros-hydro-geometry-msgs, ros-hydro-nodelet, ros-hydro-pluginlib, ros-hydro-roscpp, ros-hydro-sensor-msgs, ros-hydro-std-msgs, ros-hydro-tf, ros-hydro-yocs-controllers
+Homepage: http://ros.org/wiki/yocs_diff_drive_pose_controller
+Standards-Version: 3.9.2
+
+Package: ros-hydro-yocs-diff-drive-pose-controller
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-ecl-threads, ros-hydro-geometry-msgs, ros-hydro-nodelet, ros-hydro-pluginlib, ros-hydro-roscpp, ros-hydro-sensor-msgs, ros-hydro-std-msgs, ros-hydro-tf, ros-hydro-yocs-controllers
+Description: A controller for driving a differential drive base to a pose goal or along a path specified by multiple poses. A pose consists of a 2D position (x,y) and a 1D orientation (theta).
