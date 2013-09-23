@@ -1,0 +1,18 @@
+<package>
+  <name>yujin_ocs</name>
+  <version>0.2.3</version>
+  <description>Yujin Robot's open-source control software</description>
+  <maintainer email="jorge@rnd.yujinrobot.com">Jorge Santos Simon</maintainer>
+  <license>BSD</license>
+  <author>Yujin Robot</author>
+  <url>http://ros.org/wiki/yujin_ocs</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>cmd_vel_mux</run_depend>
+  <run_depend>yocs_controllers</run_depend>
+  <run_depend>yocs_velocity_smoother</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
