@@ -1,16 +1,14 @@
 <package>
   <name>yocs_velocity_smoother</name>
-  <version>0.4.0</version>
+  <version>0.2.3</version>
   <description>
      Bound incoming velocity messages according to robot velocity and acceleration limits.
   </description>
   <author email="jorge@yujinrobot.com">Jorge Santos Simon</author>
   <maintainer email="jorge@yujinrobot.com">Jorge Santos Simon</maintainer>
   <license>BSD</license>
-  <url type="website">http://ros.org/wiki/yocs_velocity_smoother</url>
-  <url type="repository">https://github.com/yujinrobot/yujin_ocs</url>
-  <url type="bugtracker">https://github.com/yujinrobot/yujin_ocs/issues</url>
-  
+  <url>http://ros.org/wiki/yocs_velocity_smoother</url>
+
   <buildtool_depend>catkin</buildtool_depend>
 
   <build_depend>roscpp</build_depend>

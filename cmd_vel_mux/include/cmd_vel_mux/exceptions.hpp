@@ -2,9 +2,6 @@
  * @file /cmd_vel_mux/include/cmd_vel_mux/exceptions.hpp
  *
  * @brief Exception classes for cmd_vel_mux.
- *
- * License: BSD
- *   https://raw.github.com/yujinrobot/yujin_ocs/groovy/cmd_vel_mux/LICENSE
  **/
 /*****************************************************************************
 ** Ifdefs
