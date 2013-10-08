@@ -11,8 +11,7 @@ catkin_package(
    CATKIN_DEPENDS roscpp pluginlib nodelet ecl_threads dynamic_reconfigure geometry_msgs nav_msgs
 )
 
-include_directories(SYSTEM ${catkin_INCLUDE_DIRS})
-include_directories(include)
+include_directories(include ${catkin_INCLUDE_DIRS})
 
 
 # Nodelet library
@@ -21,6 +20,7 @@ add_library(velocity_smoother_nodelet src/velocity_smoother_nodelet.cpp)
 
 target_link_libraries(velocity_smoother_nodelet ${catkin_LIBRARIES})
 add_dependencies(velocity_smoother_nodelet ${PROJECT_NAME}_gencfg)
+
 
 install(TARGETS velocity_smoother_nodelet
         DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
