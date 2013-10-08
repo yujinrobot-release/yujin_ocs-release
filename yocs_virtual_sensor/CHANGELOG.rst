@@ -1,21 +1,19 @@
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package yocs_controllers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package yocs_virtual_sensor
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 0.4.1 (2013-10-08)
 ------------------
+* Initial version: migrated here from https://github.com/yujinrobot/kobuki-x
 
-0.4.0 (2013-08-29)
-------------------
-* Add bugtracker and repo info URLs.
-* Changelogs at package level.
+0.4.0 (2013-09-23 11:17)
+------------------------
 
 0.3.0 (2013-07-02)
 ------------------
 
-0.2.3 (2013-04-15)
-------------------
-* Removes confusing and unnecessary info
+0.2.3 (2013-09-23 11:23)
+------------------------
 
 0.2.2 (2013-02-10)
 ------------------
@@ -25,7 +23,6 @@ Changelog for package yocs_controllers
 
 0.2.0 (2013-02-07)
 ------------------
-* Catkinized.
 
 0.1.3 (2013-01-08)
 ------------------
@@ -38,4 +35,3 @@ Changelog for package yocs_controllers
 
 0.1.0 (2012-12-05)
 ------------------
-* Initial version.
