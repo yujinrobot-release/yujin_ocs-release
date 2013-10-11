@@ -1,0 +1,73 @@
+ros-hydro-yocs-msgs (0.5.0-0quantal) quantal; urgency=high
+
+
+
+ -- Jorge Santos <jorge@rnd.yujinrobot.com>  Thu, 10 Oct 2013 15:00:00 -0000
+
+ros-hydro-yocs-msgs (0.4.1-0quantal) quantal; urgency=high
+
+  * Initial version: migrated here from https://github.com/yujinrobot/kobuki-x
+
+ -- Jorge Santos <jorge@rnd.yujinrobot.com>  Mon, 07 Oct 2013 15:00:00 -0000
+
+ros-hydro-yocs-msgs (0.4.0-0quantal) quantal; urgency=high
+
+
+
+ -- Jorge Santos <jorge@rnd.yujinrobot.com>  Mon, 23 Sep 2013 02:17:00 -0000
+
+ros-hydro-yocs-msgs (0.3.0-0quantal) quantal; urgency=high
+
+
+
+ -- Jorge Santos <jorge@rnd.yujinrobot.com>  Mon, 01 Jul 2013 15:00:00 -0000
+
+ros-hydro-yocs-msgs (0.2.3-0quantal) quantal; urgency=high
+
+
+
+ -- Jorge Santos <jorge@rnd.yujinrobot.com>  Mon, 23 Sep 2013 02:23:00 -0000
+
+ros-hydro-yocs-msgs (0.2.2-0quantal) quantal; urgency=high
+
+
+
+ -- Jorge Santos <jorge@rnd.yujinrobot.com>  Sat, 09 Feb 2013 15:00:00 -0000
+
+ros-hydro-yocs-msgs (0.2.1-0quantal) quantal; urgency=high
+
+
+
+ -- Jorge Santos <jorge@rnd.yujinrobot.com>  Thu, 07 Feb 2013 15:00:00 -0000
+
+ros-hydro-yocs-msgs (0.2.0-0quantal) quantal; urgency=high
+
+
+
+ -- Jorge Santos <jorge@rnd.yujinrobot.com>  Wed, 06 Feb 2013 15:00:00 -0000
+
+ros-hydro-yocs-msgs (0.1.3-0quantal) quantal; urgency=high
+
+
+
+ -- Jorge Santos <jorge@rnd.yujinrobot.com>  Mon, 07 Jan 2013 15:00:00 -0000
+
+ros-hydro-yocs-msgs (0.1.2-0quantal) quantal; urgency=high
+
+
+
+ -- Jorge Santos <jorge@rnd.yujinrobot.com>  Tue, 01 Jan 2013 15:00:00 -0000
+
+ros-hydro-yocs-msgs (0.1.1-0quantal) quantal; urgency=high
+
+
+
+ -- Jorge Santos <jorge@rnd.yujinrobot.com>  Thu, 20 Dec 2012 15:00:00 -0000
+
+ros-hydro-yocs-msgs (0.1.0-0quantal) quantal; urgency=high
+
+
+
+ -- Jorge Santos <jorge@rnd.yujinrobot.com>  Tue, 04 Dec 2012 15:00:00 -0000
+
+
