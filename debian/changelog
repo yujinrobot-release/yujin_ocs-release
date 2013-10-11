@@ -1,0 +1,80 @@
+ros-hydro-yocs-velocity-smoother (0.5.0-0raring) raring; urgency=high
+
+  * Issue #19 <https://github.com/yujinrobot/yujin_ocs/issues/19>: rename cmd_vel_mux as yocs_cmd_vel_mux. In general, add yocs prefix to include dirs, namespaces and targets, but not  to src files.
+
+ -- Jorge Santos Simon <jorge@yujinrobot.com>  Thu, 10 Oct 2013 15:00:00 -0000
+
+ros-hydro-yocs-velocity-smoother (0.4.1-0raring) raring; urgency=high
+
+
+
+ -- Jorge Santos Simon <jorge@yujinrobot.com>  Mon, 07 Oct 2013 15:00:00 -0000
+
+ros-hydro-yocs-velocity-smoother (0.4.0-0raring) raring; urgency=high
+
+  * Add bugtracker and repo info URLs.
+  * Changelogs at package level.
+  * Separate and comment velocity feedback remaps.
+  * License link fixed.
+
+ -- Jorge Santos Simon <jorge@yujinrobot.com>  Wed, 28 Aug 2013 15:00:00 -0000
+
+ros-hydro-yocs-velocity-smoother (0.3.0-0raring) raring; urgency=high
+
+  * Fix on velocity smoother to deal with low-rate simulated time (namely Stage).
+  * Allow using end velocity commands as robot feedback (until now we can use only odometry).
+
+ -- Jorge Santos Simon <jorge@yujinrobot.com>  Mon, 01 Jul 2013 15:00:00 -0000
+
+ros-hydro-yocs-velocity-smoother (0.2.3-0raring) raring; urgency=high
+
+
+
+ -- Jorge Santos Simon <jorge@yujinrobot.com>  Sun, 14 Apr 2013 15:00:00 -0000
+
+ros-hydro-yocs-velocity-smoother (0.2.2-0raring) raring; urgency=high
+
+
+
+ -- Jorge Santos Simon <jorge@yujinrobot.com>  Sat, 09 Feb 2013 15:00:00 -0000
+
+ros-hydro-yocs-velocity-smoother (0.2.1-0raring) raring; urgency=high
+
+
+
+ -- Jorge Santos Simon <jorge@yujinrobot.com>  Thu, 07 Feb 2013 15:00:00 -0000
+
+ros-hydro-yocs-velocity-smoother (0.2.0-0raring) raring; urgency=high
+
+  * Catkinized.
+
+ -- Jorge Santos Simon <jorge@yujinrobot.com>  Wed, 06 Feb 2013 15:00:00 -0000
+
+ros-hydro-yocs-velocity-smoother (0.1.3-0raring) raring; urgency=high
+
+  * Dynamic reconfigure for velocity/acceleration limits.
+  * Fix on deceleration smoothing.
+
+ -- Jorge Santos Simon <jorge@yujinrobot.com>  Mon, 07 Jan 2013 15:00:00 -0000
+
+ros-hydro-yocs-velocity-smoother (0.1.2-0raring) raring; urgency=high
+
+  * Add test program.
+  * Add licensing.
+
+ -- Jorge Santos Simon <jorge@yujinrobot.com>  Tue, 01 Jan 2013 15:00:00 -0000
+
+ros-hydro-yocs-velocity-smoother (0.1.1-0raring) raring; urgency=high
+
+  * Keep direction constant when smoothing velocities, i.e. draw constant arcs. To do so we must sometimes over-limit dv or dw.
+  * Bound velocity in addition to acceleration. Also set physically meaningful values for acceleration.
+
+ -- Jorge Santos Simon <jorge@yujinrobot.com>  Thu, 20 Dec 2012 15:00:00 -0000
+
+ros-hydro-yocs-velocity-smoother (0.1.0-0raring) raring; urgency=high
+
+  * Initial version.
+
+ -- Jorge Santos Simon <jorge@yujinrobot.com>  Tue, 04 Dec 2012 15:00:00 -0000
+
+
