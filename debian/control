@@ -1,0 +1,12 @@
+Source: ros-hydro-yocs-msgs
+Section: misc
+Priority: extra
+Maintainer: Jorge Santos <jorge@rnd.yujinrobot.com>
+Build-Depends: debhelper (>= 7.0.50~), ros-hydro-catkin, ros-hydro-geometry-msgs, ros-hydro-message-generation, ros-hydro-std-msgs, ros-hydro-std-srvs
+Homepage: http://ros.org/wiki/yocs_msgs
+Standards-Version: 3.9.2
+
+Package: ros-hydro-yocs-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-hydro-geometry-msgs, ros-hydro-message-runtime, ros-hydro-std-msgs, ros-hydro-std-srvs
+Description: Yujin's Open Control System messages, services and actions
