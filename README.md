@@ -1,4 +1,4 @@
-yocs_msgs
-=========
+Yujin Open Control System (yocs)
+================================
 
-Yujin's Open Control System messages, services and actions
+Yujin Robot's open-source control system including libraries and exectuables
