@@ -1,6 +1,6 @@
 <package>
   <name>yujin_ocs</name>
-  <version>0.5.1</version>
+  <version>0.5.2</version>
   <description>Yujin Robot's open-source control software</description>
   <maintainer email="jorge@rnd.yujinrobot.com">Jorge Santos Simon</maintainer>
   <license>BSD</license>
@@ -15,9 +15,9 @@
   <run_depend>yocs_controllers</run_depend>
   <run_depend>yocs_diff_drive_pose_controller</run_depend>
   <run_depend>yocs_math_toolkit</run_depend>
-  <run_depend>yocs_msgs</run_depend>
   <run_depend>yocs_velocity_smoother</run_depend>
   <run_depend>yocs_virtual_sensor</run_depend>
+  <run_depend>yocs_waypoints_navi</run_depend>
   
   <export>
     <metapackage/>
