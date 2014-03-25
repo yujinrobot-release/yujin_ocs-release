@@ -1,3 +1,30 @@
+## yujin_ocs (hydro) - 0.5.3-0
+
+User `jihoonl@whoola` released the packages in the `yujin_ocs` repository into the `hydro` distro by running `/usr/bin/bloom-release yujin_ocs --track=hydro --rosdistro=hydro` on `Tue, 25 Mar 2014 00:06:43 -0000`
+
+These packages were released:
+- `yocs_cmd_vel_mux`
+- `yocs_controllers`
+- `yocs_diff_drive_pose_controller`
+- `yocs_math_toolkit`
+- `yocs_velocity_smoother`
+- `yocs_virtual_sensor`
+- `yocs_waypoints_navi`
+- `yujin_ocs`
+
+Version of package(s) in repository `yujin_ocs`:
+- rosdistro version: `0.5.2-1`
+- old version: `0.5.2-1`
+- new version: `0.5.3-0`
+
+Versions of tools used:
+- bloom version: `0.5.2`
+- catkin_pkg version: `0.1.27`
+- rosdep version: `0.10.25`
+- rosdistro version: `0.3.4`
+- vcstools version: `0.1.33`
+
+
 ## yujin_ocs - 0.5.2-1
 
 User `jorge@concert` released the packages in the `yujin_ocs` repository by running `/usr/bin/bloom-release --track hydro --rosdistro hydro yujin_ocs` on `Wed, 06 Nov 2013 09:31:23 -0000`
