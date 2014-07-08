@@ -1,0 +1,13 @@
+ros-indigo-yocs-ar-marker-tracking (0.6.1-0trusty) trusty; urgency=high
+
+  * apply install rules for new packages
+  * use ar_track_alvar_msgs instead of ar_track_alvar
+  * remove eclipse files from bad src location.
+  * yaml 0.5 support
+  * ar_pair_tracking system working
+  * migrates ar marker based algorithms from kobuki x
+  * Contributors: Daniel Stonier, Jihoon Lee
+
+ -- Daniel Stonier <d.stonier@yujinrobot.com>  Mon, 07 Jul 2014 15:00:00 -0000
+
+
