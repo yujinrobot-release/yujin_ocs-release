@@ -2,6 +2,11 @@
 Changelog for package yocs_cmd_vel_mux
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.0 (2014-07-08)
+------------------
+* updating package informations. remove email for authors. updating maintainer
+* Contributors: Jihoon Lee
+
 0.5.3 (2014-03-24)
 ------------------
 * Added support for YAML-CPP 0.5+.

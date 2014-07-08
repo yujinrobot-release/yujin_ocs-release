@@ -2,6 +2,11 @@
 Changelog for package yocs_controllers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.0 (2014-07-08)
+------------------
+* updating package informations. remove email for authors. updating maintainer
+* Contributors: Jihoon Lee
+
 0.5.3 (2014-03-24)
 ------------------
 
