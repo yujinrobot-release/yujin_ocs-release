@@ -2,6 +2,9 @@
 Changelog for package yocs_localization_manager
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.3 (2014-12-05)
+------------------
+
 0.6.2 (2014-11-30)
 ------------------
 * support simulation
