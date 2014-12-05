@@ -1,3 +1,44 @@
+## yujin_ocs (indigo) - 0.6.3-0
+
+The packages in the `yujin_ocs` repository were released into the `indigo` distro by running `/usr/bin/bloom-release yujin_ocs -t indigo -r indigo` on `Fri, 05 Dec 2014 06:49:57 -0000`
+
+These packages were released:
+- `yocs_cmd_vel_mux`
+- `yocs_controllers`
+- `yocs_diff_drive_pose_controller`
+- `yocs_joyop`
+- `yocs_keyop`
+- `yocs_math_toolkit`
+- `yocs_rapps`
+- `yocs_safety_controller`
+- `yocs_velocity_smoother`
+- `yocs_virtual_sensor`
+- `yocs_waypoints_navi`
+- `yujin_ocs`
+
+These packages were explicitly ignored:
+- `yocs_navigator`
+- `yocs_localization_manager`
+- `yocs_ar_marker_tracking`
+- `yocs_ar_pair_approach`
+- `yocs_ar_pair_tracking`
+- `yocs_waypoint_provider`
+
+Version of package(s) in repository `yujin_ocs`:
+- upstream repository: https://github.com/yujinrobot/yujin_ocs.git
+- release repository: https://github.com/yujinrobot-release/yujin_ocs-release.git
+- rosdistro version: `0.6.2-0`
+- old version: `0.6.2-0`
+- new version: `0.6.3-0`
+
+Versions of tools used:
+- bloom version: `0.5.14`
+- catkin_pkg version: `0.2.6`
+- rosdep version: `0.10.33`
+- rosdistro version: `0.3.6`
+- vcstools version: `0.1.35`
+
+
 ## yujin_ocs (indigo) - 0.6.2-0
 
 The packages in the `yujin_ocs` repository were released into the `indigo` distro by running `/usr/bin/bloom-release yujin_ocs -t indigo -r indigo` on `Sun, 30 Nov 2014 07:36:03 -0000`
