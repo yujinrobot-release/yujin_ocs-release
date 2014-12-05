@@ -2,6 +2,9 @@
 Changelog for package yocs_joyop
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.3 (2014-12-05)
+------------------
+
 0.6.2 (2014-11-30)
 ------------------
 * Merge branch 'waypoints_update' into indigo-devel
