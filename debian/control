@@ -1,0 +1,12 @@
+Source: ros-indigo-yocs-navigator
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonl@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-actionlib, ros-indigo-catkin, ros-indigo-move-base-msgs, ros-indigo-nav-msgs, ros-indigo-roscpp, ros-indigo-rospy, ros-indigo-tf, ros-indigo-yocs-math-toolkit, ros-indigo-yocs-msgs
+Homepage: http://wiki.ros.org/yocs_navigator
+Standards-Version: 3.9.2
+
+Package: ros-indigo-yocs-navigator
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-actionlib, ros-indigo-move-base-msgs, ros-indigo-nav-msgs, ros-indigo-roscpp, ros-indigo-rospy, ros-indigo-tf, ros-indigo-yocs-math-toolkit, ros-indigo-yocs-msgs
+Description: Navigation module for robots
