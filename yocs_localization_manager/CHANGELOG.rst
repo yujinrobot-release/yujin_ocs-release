@@ -2,6 +2,20 @@
 Changelog for package yocs_localization_manager
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.4 (2015-02-09)
+------------------
+* comment out debug messages
+* add ar target offset param
+* updates
+* updates
+* base tf publisher
+* ar pair approach publishes target frame now
+* add sleep to publish tf properly
+* Contributors: Jihoon Lee
+
+0.6.3 (2014-12-05)
+------------------
+
 0.6.2 (2014-11-30)
 ------------------
 * support simulation
