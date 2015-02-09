@@ -1,0 +1,12 @@
+Source: ros-indigo-yocs-ar-pair-approach
+Section: misc
+Priority: extra
+Maintainer: Daniel Stonier <d.stonier@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin
+Homepage: http://ros.org/wiki/yocs_ar_pair_approach
+Standards-Version: 3.9.2
+
+Package: ros-indigo-yocs-ar-pair-approach
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-dynamic-reconfigure, ros-indigo-geometry-msgs, ros-indigo-rospy, ros-indigo-std-msgs, ros-indigo-tf
+Description: Search and approach behaviour, moving to a target in front of a pair of ar markers.
