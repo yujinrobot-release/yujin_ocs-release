@@ -1,0 +1,12 @@
+Source: ros-indigo-yocs-ar-pair-tracking
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonl@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-ar-track-alvar-msgs, ros-indigo-catkin, ros-indigo-geometry-msgs, ros-indigo-roscpp, ros-indigo-sensor-msgs, ros-indigo-std-msgs, ros-indigo-yocs-ar-marker-tracking, ros-indigo-yocs-math-toolkit, ros-indigo-yocs-msgs
+Homepage: http://wiki.ros.org/yocs_ar_pair_tracking
+Standards-Version: 3.9.2
+
+Package: ros-indigo-yocs-ar-pair-tracking
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-ar-track-alvar-msgs, ros-indigo-geometry-msgs, ros-indigo-roscpp, ros-indigo-sensor-msgs, ros-indigo-std-msgs, ros-indigo-yocs-ar-marker-tracking, ros-indigo-yocs-math-toolkit, ros-indigo-yocs-msgs
+Description: The AR pair tracking package
