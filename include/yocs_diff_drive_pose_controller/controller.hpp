@@ -44,8 +44,10 @@
 #include <std_msgs/Bool.h>
 #include <std_msgs/Empty.h>
 #include <std_msgs/Float32.h>
+#include <std_msgs/String.h>
 #include <tf/transform_listener.h>
 #include <yocs_controllers/default_controller.hpp>
+#include <yocs_math_toolkit/geometry.hpp>
 
 namespace yocs
 {
@@ -116,15 +118,24 @@ private:
 
   /**
    * @brief Callback for enabling the controler
-   * @param msg empty message
+   * @param msg goal frame name
    */
-  void enableCB(const std_msgs::EmptyConstPtr msg);
+  void enableCB(const std_msgs::StringConstPtr msg);
 
   /**
    * @brief Callback for disabling the controler
    * @param msg empty message
    */
   void disableCB(const std_msgs::EmptyConstPtr msg);
+
+  /**
+   * @brief Bounding range of velocity
+   * @param v velocity
+   * @param min minimum speed
+   * @param max maximum speed
+   * @return bounded velocity
+   */
+  double boundRange(double v, double min, double max);
 
   // basics
   ros::NodeHandle nh_;
@@ -348,44 +359,27 @@ bool DiffDrivePoseController::getPoseDiff()
                  + std::pow(tf_goal_pose_rel_.getOrigin().getY(), 2));
   // determine orientation of r relative to the base frame
   delta_ = std::atan2(-tf_goal_pose_rel_.getOrigin().getY(), tf_goal_pose_rel_.getOrigin().getX());
+  
   // determine orientation of r relative to the goal frame
   // helper: theta = tf's orientation + delta
-  theta_ = tf::getYaw(tf_goal_pose_rel_.getRotation()) + delta_;
+  double heading =  mtk::wrapAngle(tf::getYaw(tf_goal_pose_rel_.getRotation()));
+  theta_ = heading + delta_;
 
   return true;
 };
 
 void DiffDrivePoseController::getControlOutput()
 {
-  cur_ = (-1 / r_) * (k_2_ * (delta_ - std::atan(-k_1_ * theta_))
+  double atan2_k1_tehta = std::atan2(-theta_, k_1_);
+
+  cur_ = (-1 / r_) * (k_2_ * (delta_ - atan2_k1_tehta)
          + (1 + (k_1_ / (1 + std::pow((k_1_ * theta_), 2)))) * sin(delta_));
   v_ = v_max_ / (1 + beta_ * std::pow(std::abs(cur_), lambda_));
 
-  // bounds for v
-  if (v_ < 0.0)
-  {
-    if (v_ > -v_min_)
-    {
-      v_ = -v_min_;
-    }
-    else if (v_ < -v_max_)
-    {
-      v_ = -v_max_;
-    }
-  }
-  else
-  {
-    if (v_ < v_min_)
-    {
-      v_ = v_min_;
-    }
-    else if (v_ > v_max_)
-    {
-      v_ = v_max_;
-    }
-  }
+  v_ = boundRange(v_, v_min_, v_max_);
 
   w_ = cur_ * v_; // unbounded for now
+  w_ = boundRange(w_, w_min_, w_max_);
 
   // pose reached thresholds
   if (r_ <= dist_thres_)
@@ -419,6 +413,35 @@ void DiffDrivePoseController::getControlOutput()
   }
 };
 
+double DiffDrivePoseController::boundRange(double v, double min, double max)
+{
+  // bounds for v
+  if (v < 0.0)
+  {
+    if (v > -min)
+    {
+      v = -min;
+    }
+    else if (v < -max)
+    {
+      v = -max;
+    }
+  }
+  else
+  {
+    if (v < min)
+    {
+      v = min;
+    }
+    else if (v > max)
+    {
+      v = max;
+    }
+  }
+
+  return v;
+}
+
 void DiffDrivePoseController::setControlOutput()
 {
   geometry_msgs::TwistPtr cmd_vel(new geometry_msgs::Twist());
@@ -436,15 +459,16 @@ void DiffDrivePoseController::controlMaxVelCB(const std_msgs::Float32ConstPtr ms
   ROS_INFO_STREAM("Maximum linear control velocity has been set to " << v_max_ << ". [" << name_ << "]");
 };
 
-void DiffDrivePoseController::enableCB(const std_msgs::EmptyConstPtr msg)
+void DiffDrivePoseController::enableCB(const std_msgs::StringConstPtr msg)
 {
   if (this->enable())
   {
-    ROS_INFO_STREAM("Controller has been enabled. [" << name_ << "]");
+    goal_frame_name_ = msg->data;
+    ROS_INFO_STREAM("Controller has been enabled. [" << name_ << "] with goal frame [" << goal_frame_name_ << "]");
   }
   else
   {
-    ROS_INFO_STREAM("Controller was already enabled. [" << name_ <<"]");
+    ROS_INFO_STREAM("Controller was already enabled. [" << name_ <<"] with Goal frame [" << goal_frame_name_ << "]");
   }
 };
 
