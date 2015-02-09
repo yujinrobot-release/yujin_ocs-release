@@ -37,6 +37,8 @@ class TrackerManager(object):
         param['ar_pair_global_prefix'] = rospy.get_param('ar_pair/global_prefix', 'global_marker')
         param['ar_pair_target_postfix'] = rospy.get_param('ar_pair/global_postfix', 'target')
 
+        self.loginfo("Target offset : %s"%param['ar_pair_target_offset'])
+
         self.param = param
 
     def _init_variables(self):
@@ -82,9 +84,11 @@ class TrackerManager(object):
             child_frame_id = parent_frame_id + '_' + target_postfix
             parent_frame_id = remove_leading_slash(parent_frame_id)
             child_frame_id = remove_leading_slash(child_frame_id)
+
             p = (0,0, target_offset)
             q = tf.transformations.quaternion_from_euler(math.pi, 0, 0)
             self._tf_broadcaster.sendTransform(p, q, rospy.Time.now(), child_frame_id , parent_frame_id)
+            rospy.sleep(0.05)
 
     def _publish_marker_tfs(self):
         global_prefix = self.param['ar_pair_global_prefix']
@@ -96,7 +100,7 @@ class TrackerManager(object):
             p = (marker.pose.pose.position.x,marker.pose.pose.position.y, marker.pose.pose.position.z)
             q = (marker.pose.pose.orientation.x, marker.pose.pose.orientation.y, marker.pose.pose.orientation.z,marker.pose.pose.orientation.w)
             self._tf_broadcaster.sendTransform(p, q, rospy.Time.now(), child_frame_id ,parent_frame_id)
-
+            rospy.sleep(0.05)
 
     def loginfo(self, msg):
         rospy.loginfo('TrackerManager : ' + str(msg))
@@ -112,5 +116,3 @@ class TrackerManager(object):
                 r.sleep()
                 self._publish_target_tfs()
                 r.sleep()
-
-
