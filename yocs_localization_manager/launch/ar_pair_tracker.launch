@@ -2,8 +2,11 @@
   <!-- Tracker configuration -->
   <arg name="global_ar_pair_topic"/> <!-- topic to receive global marker pair information -->
   <arg name="predicted_robot_pose_topic"/> <!-- topic to notify localization manager to localize robot -->
-  <arg name="global_frame"         default="map"/>
-  <arg name="base_frame"           default="base_footprint"/>
+  <arg name="global_frame"                default="map"/>
+  <arg name="base_frame"                  default="base_footprint"/>
+  <arg name="spotted_marker_topic"        default="spotted_markers"/>
+  <arg name="relative_target_pose_topic"  default="relative_target_pose"/>
+  <arg name="ar_pair_target_offset"       default="0.5"/>
 
   <!-- AR Track Alvar configuration -->
   <arg name="marker_size"          default="6.9" />
@@ -29,11 +32,13 @@
     <param name="marker_frame" value="$(arg output_frame)"/>
     <remap from="ar_pair_tracking/update_ar_pairs"        to="update_ar_pairs"/>
     <remap from="ar_pair_tracking/initial_pose"           to="$(arg predicted_robot_pose_topic)"/>  <!-- output to outside -->
+    <remap from="ar_pair_tracking/spotted_markers"        to="$(arg spotted_marker_topic)"/>
+    <remap from="ar_pair_tracking/relative_target_pose"        to="$(arg relative_target_pose_topic)"/>
   </node>
 
-
+  <param name="ar_pair/target_offset" value="$(arg ar_pair_target_offset)"/>
   <node pkg="yocs_localization_manager" name="tracker_manager" type="tracker_manager.py">
-    <remap from="update_ar_pairs" to="update_ar_pairs"/>
-    <remap from="global_pairs" to="$(arg global_ar_pair_topic)"/> <!-- input from outside -->
+    <remap from="update_ar_pairs"       to="update_ar_pairs"/>
+    <remap from="global_pairs"          to="$(arg global_ar_pair_topic)"/> <!-- input from outside -->
  </node>
 </launch>
