@@ -1,0 +1,36 @@
+ros-indigo-yocs-ar-pair-tracking (0.6.4-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonl@yujinrobot.com>  Sun, 08 Feb 2015 15:00:00 -0000
+
+ros-indigo-yocs-ar-pair-tracking (0.6.3-0trusty) trusty; urgency=high
+
+
+
+ -- Jihoon Lee <jihoonl@yujinrobot.com>  Thu, 04 Dec 2014 15:00:00 -0000
+
+ros-indigo-yocs-ar-pair-tracking (0.6.2-0trusty) trusty; urgency=high
+
+  * update navigation configurations
+  * switch maintainer to jihoonl and add yaml-cpp dependency. Fix #56 <https://github.com/yujinrobot/yujin_ocs/issues/56>
+  * reduce covariance size to fix #53 <https://github.com/yujinrobot/yujin_ocs/issues/53>
+  * reduce covariance size to fix #53 <https://github.com/yujinrobot/yujin_ocs/issues/53>
+  * add issue tracker and repository info
+  * Contributors: Jihoon Lee, dwlee
+
+ -- Jihoon Lee <jihoonl@yujinrobot.com>  Sat, 29 Nov 2014 15:00:00 -0000
+
+ros-indigo-yocs-ar-pair-tracking (0.6.1-0trusty) trusty; urgency=high
+
+  * remove eclipse files from bad src location.
+  * apply install rules for new packages
+  * use ar_track_alvar_msgs instead of ar_track_alvar
+  * covariance matrix when it creates pose message closes #34 <https://github.com/yujinrobot/yujin_ocs/issues/34>
+  * ar_pair_tracking system working
+  * migrates ar marker based algorithms from kobuki x
+  * Contributors: Daniel Stonier, Jihoon Lee, jihoonl
+
+ -- Daniel Stonier <stonier@yujinrobot.com>  Mon, 07 Jul 2014 15:00:00 -0000
+
+
