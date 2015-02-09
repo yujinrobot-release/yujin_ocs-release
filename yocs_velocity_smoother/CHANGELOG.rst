@@ -2,6 +2,12 @@
 Changelog for package yocs_velocity_smoother
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.4 (2015-02-09)
+------------------
+
+0.6.3 (2014-12-05)
+------------------
+
 0.6.2 (2014-11-30)
 ------------------
 * yocs_velocity_smoother: adds node name param to launcher
