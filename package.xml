@@ -1,6 +1,6 @@
 <package>
   <name>yocs_ar_pair_approach</name>
-  <version>0.6.2</version>
+  <version>0.6.4</version>
   <description>
     Search and approach behaviour, moving to a target in front of a pair of ar markers.
   </description>
@@ -15,6 +15,7 @@
 
   <run_depend>rospy</run_depend>
   <run_depend>std_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
   <run_depend>tf</run_depend>
   <run_depend>dynamic_reconfigure</run_depend>
 </package>
