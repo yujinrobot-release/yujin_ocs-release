@@ -2,6 +2,7 @@
  basic_move_controller.py
  LICENSE : BSD - https://raw.github.com/yujinrobot/yujin_ocs/license/LICENSE
 '''
+import math
 import copy
 import rospy
 import tf
@@ -52,3 +53,18 @@ class BasicMoveController(object):
         quaternion = (self._odom.pose.pose.orientation.x, self._odom.pose.pose.orientation.y, self._odom.pose.pose.orientation.z, self._odom.pose.pose.orientation.w)
         roll, pitch, yaw = tf.transformations.euler_from_quaternion(quaternion)
         return yaw
+
+    def slow_backward(self):
+        self.move_at(-0.1, 0.0, 0.1)
+
+    def backward(self, distance):
+        pos0 = copy.deepcopy(self._odom.pose.pose.position)
+
+        while(self._distance2d(pos0, self._odom.pose.pose.position) < distance):
+            self.slow_backward()
+
+    def _distance2d(self, p1, p2):
+        '''
+        computes distance between two points
+        '''
+        return math.sqrt(math.pow((p2.x - p1.x), 2) + math.pow((p2.y -p1.y), 2))
