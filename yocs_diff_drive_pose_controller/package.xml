@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>yocs_diff_drive_pose_controller</name>
-  <version>0.6.3</version>
+  <version>0.6.4</version>
   <description>
     A controller for driving a differential drive base to a pose goal or along a path specified by multiple poses.
     A pose consists of a 2D position (x,y) and a 1D orientation (theta).
@@ -24,6 +24,7 @@
   <build_depend>std_msgs</build_depend>
   <build_depend>tf</build_depend>
   <build_depend>yocs_controllers</build_depend>
+  <build_depend>yocs_math_toolkit</build_depend>
 
   <run_depend>ecl_threads</run_depend>
   <run_depend>geometry_msgs</run_depend>
@@ -34,6 +35,7 @@
   <run_depend>std_msgs</run_depend>
   <run_depend>tf</run_depend>
   <run_depend>yocs_controllers</run_depend>
+  <run_depend>yocs_math_toolkit</run_depend>
   
   <export>
     <nodelet plugin="${prefix}/plugins/nodelets.xml"/>
