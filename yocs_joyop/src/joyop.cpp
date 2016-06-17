@@ -27,14 +27,19 @@ private:
 
   ros::NodeHandle ph_, nh_;
 
-  int linear_, angular_, deadman_button_, enable_button_, disable_button_, enabled_;
+  // states
+  int linear_, angular_, enabled_;
+  // button ids
+  int deadman_button_, enable_button_, disable_button_;
   double l_scale_, a_scale_, spin_freq_;
   ros::Publisher enable_pub_, disable_pub_, vel_pub_;
   ros::Subscriber joy_sub_;
 
   geometry_msgs::Twist last_published_;
   boost::mutex publish_mutex_;
-  bool enable_pressed_, disable_pressed_, deadman_pressed_, zero_twist_published_, wait_for_connection_;
+  // callback notifications (kept separate from current state)
+  bool enable_pressed_, disable_pressed_, deadman_pressed_, zero_twist_published_;
+  int wait_for_connection_; /**< Time to wait for enable/disable topics in seconds (-1 to not wait). **/
   ros::Timer timer_;
 
 };
@@ -49,7 +54,12 @@ JoyOp::JoyOp():
   l_scale_(0.3),
   a_scale_(0.9),
   spin_freq_(10),
-  wait_for_connection_(true)
+  wait_for_connection_(-1),
+  enabled_(false),
+  enable_pressed_(false),
+  disable_pressed_(false),
+  deadman_pressed_(false),
+  zero_twist_published_(false)
 {
   ph_.param("linear_axis", linear_, linear_);
   ph_.param("angular_axis", angular_, angular_);
@@ -61,12 +71,6 @@ JoyOp::JoyOp():
   ph_.param("spin_frequency", spin_freq_, spin_freq_);
   ph_.param("wait_for_connection", wait_for_connection_, wait_for_connection_);
 
-  enabled_ = false;
-  enable_pressed_ = false;
-  disable_pressed_ = false;
-  deadman_pressed_ = false;
-  zero_twist_published_ = false;
-
   enable_pub_ = ph_.advertise<std_msgs::String>("enable", 1, true);
   disable_pub_ = ph_.advertise<std_msgs::String>("disable", 1, true);
   vel_pub_ = ph_.advertise<geometry_msgs::Twist>("cmd_vel", 1, true);
@@ -74,10 +78,12 @@ JoyOp::JoyOp():
 
   timer_ = nh_.createTimer(ros::Duration(1/spin_freq_), boost::bind(&JoyOp::publish, this));
 
-  /*********************
+  /******************************************
    ** Wait for connection
-   **********************/
-  if (!wait_for_connection_)
+   *******************************************/
+  // this is only waiting for the enable/disable connection and if connected
+  // it will send the 'all' message to enable the motors automatically
+  if (wait_for_connection_ <= 0)
   {
     return;
   }
@@ -92,7 +98,7 @@ JoyOp::JoyOp():
       connected = true;
       break;
     }
-    if (count == 6)
+    if (count == 2*wait_for_connection_) // loop every 500ms
     {
       connected = false;
       break;

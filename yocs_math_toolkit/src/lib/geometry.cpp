@@ -5,8 +5,8 @@
  *      Author: jorge
  */
 
-#include "yocs_math_toolkit/common.hpp"
-#include "yocs_math_toolkit/geometry.hpp"
+#include "../../include/yocs_math_toolkit/common.hpp"
+#include "../../include/yocs_math_toolkit/geometry.hpp"
 
 
 namespace mtk
@@ -57,6 +57,21 @@ double pitch(geometry_msgs::Pose pose)
 double pitch(geometry_msgs::PoseStamped pose)
 {
   return pitch(pose.pose);
+}
+
+double yaw(const tf::Transform& tf)
+{
+  return tf::getYaw(tf.getRotation());
+}
+
+double yaw(geometry_msgs::Pose pose)
+{
+  return tf::getYaw(pose.orientation);
+}
+
+double yaw(geometry_msgs::PoseStamped pose)
+{
+  return yaw(pose.pose);
 }
 
 
@@ -131,6 +146,26 @@ double distance3D(const tf::Transform& a, const tf::Transform& b)
   return distance3D(a.getOrigin(), b.getOrigin());
 }
 
+
+double heading(const tf::Vector3& p)
+{
+  return std::atan2(p.y(), p.x());
+}
+
+double heading(geometry_msgs::Point p)
+{
+  return heading(tf::Vector3(p.x, p.y, p.z));
+}
+
+double heading(geometry_msgs::Pose p)
+{
+  return heading(p.position);
+}
+
+double heading(const tf::Transform& t)
+{
+  return heading(t.getOrigin());
+}
 
 double heading(const tf::Vector3& a, const tf::Vector3& b)
 {

@@ -13,7 +13,7 @@
 
 #include <geometry_msgs/Pose.h>
 #include <geometry_msgs/PoseStamped.h>
-
+#include <ecl/config/macros.hpp>
 
 namespace mtk
 {
@@ -68,9 +68,22 @@ void tf2pose(const tf::StampedTransform& tf, geometry_msgs::PoseStamped& pose);
 void pose2tf(const geometry_msgs::Pose& pose, tf::Transform& tf);
 void pose2tf(const geometry_msgs::PoseStamped& pose, tf::StampedTransform& tf);
 
-const char* point2str(const geometry_msgs::Point& point);
-const char* pose2str(const geometry_msgs::Pose& pose);
-const char* pose2str(const geometry_msgs::PoseStamped& pose);
+std::string vector2str3D(const geometry_msgs::Vector3& vector);
+std::string vector2str3D(const geometry_msgs::Vector3Stamped& vector);
+std::string point2str2D(const geometry_msgs::Point& point);
+std::string point2str2D(const geometry_msgs::PointStamped& point);
+std::string point2str3D(const geometry_msgs::Point& point);
+std::string point2str3D(const geometry_msgs::PointStamped& point);
+std::string pose2str2D(const geometry_msgs::Pose& pose);
+std::string pose2str2D(const geometry_msgs::PoseStamped& pose);
+std::string pose2str3D(const geometry_msgs::Pose& pose);
+std::string pose2str3D(const geometry_msgs::PoseStamped& pose);
+
+// Deprecated, as you cannot call more than once in a single sentence; use the xxx2str2D/3D cousins instead
+#include <ecl/config/macros.hpp>
+ECL_DEPRECATED const char* point2str(const geometry_msgs::Point& point);
+ECL_DEPRECATED const char* pose2str(const geometry_msgs::Pose& pose);
+ECL_DEPRECATED const char* pose2str(const geometry_msgs::PoseStamped& pose);
 
 
 } /* namespace mtk */

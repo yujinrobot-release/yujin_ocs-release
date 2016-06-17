@@ -2,11 +2,6 @@
 Changelog for package yocs_waypoint_provider
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.6.4 (2015-02-09)
-------------------
-* fix yaml-cpp dependency closes `#63 <https://github.com/yujinrobot/yujin_ocs/issues/63>`_
-* Contributors: Jihoon Lee
-
 0.6.3 (2014-12-05)
 ------------------
 

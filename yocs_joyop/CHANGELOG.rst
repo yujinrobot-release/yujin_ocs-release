@@ -1,12 +1,15 @@
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package yocs_joyop
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=========
+Changelog
+=========
 
-0.6.4 (2015-02-09)
+0.8.0 (2016-05-06)
 ------------------
+* loop around waiting for a connection
 
-0.6.3 (2014-12-05)
+0.6.4 (2015-10-10)
 ------------------
+* Relays for connecting with simple topics (e.g. sounds)
+* Magic buttons for yocs_joyop, these can be used to send boolean 'events' to a system.
 
 0.6.2 (2014-11-30)
 ------------------

@@ -2,22 +2,14 @@
 Changelog for package yocs_diff_drive_pose_controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.6.4 (2015-02-09)
+0.8.0 (2016-05-06)
 ------------------
-* clean up debug messages `#72 <https://github.com/yujinrobot/yujin_ocs/issues/72>`_
-* Merge remote-tracking branch 'origin/indigo' into update_ar_pair_approach
-* comment out debug messages
-* wrap heading. bounding rotational speed. replace atan to atan2
-* updates
-* base tf publisher
-* now diff drive pose controller receives target frame as topic
-* Contributors: Jihoon Lee
+* verbose option
+* bugfix for wrapping angles properly
 
-0.6.3 (2014-12-05)
+0.6.4 (2015-10-10)
 ------------------
-
-0.6.2 (2014-11-30)
-------------------
+* many minor improvements
 
 0.6.0 (2014-07-08)
 ------------------

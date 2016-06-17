@@ -44,6 +44,15 @@ double pitch(geometry_msgs::Pose pose);
 double pitch(geometry_msgs::PoseStamped pose);
 
 /**
+ * Shortcut to take the yaw of a transform/pose
+ * @param tf/pose
+ * @return Transform/pose's yaw
+ */
+double yaw(const tf::Transform& tf);
+double yaw(geometry_msgs::Pose pose);
+double yaw(geometry_msgs::PoseStamped pose);
+
+/**
  * Euclidean distance between 2D points; z coordinate is ignored
  * @param a point a
  * @param b point b
@@ -68,13 +77,23 @@ double distance3D(const tf::Vector3& a, const tf::Vector3& b);
 double distance3D(const tf::Transform& a, const tf::Transform& b);
 
 /**
+ * Heading angle from origin to point p
+ * @param p point p
+ * @return Heading angle
+ */
+double heading(geometry_msgs::Point p);
+double heading(geometry_msgs::Pose p);
+double heading(const tf::Vector3& p);
+double heading(const tf::Transform& t);
+
+/**
  * Heading angle from point a to point b
  * @param a point a
  * @param b point b
  * @return Heading angle
  */
-double heading(geometry_msgs::Point a, geometry_msgs::Point b = geometry_msgs::Point());
-double heading(geometry_msgs::Pose a, geometry_msgs::Pose b = geometry_msgs::Pose());
+double heading(geometry_msgs::Point a, geometry_msgs::Point b);
+double heading(geometry_msgs::Pose a, geometry_msgs::Pose b);
 double heading(const tf::Vector3& a, const tf::Vector3& b);
 double heading(const tf::Transform& a, const tf::Transform& b);
 
