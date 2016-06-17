@@ -1,0 +1,13 @@
+Source: ros-kinetic-yocs-cmd-vel-mux
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonl@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), libyaml-cpp-dev, ros-kinetic-catkin, ros-kinetic-dynamic-reconfigure, ros-kinetic-geometry-msgs, ros-kinetic-nodelet, ros-kinetic-pluginlib, ros-kinetic-roscpp
+Homepage: http://ros.org/wiki/yocs_cmd_vel_mux
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-yocs-cmd-vel-mux
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libyaml-cpp-dev, ros-kinetic-dynamic-reconfigure, ros-kinetic-geometry-msgs, ros-kinetic-nodelet, ros-kinetic-pluginlib, ros-kinetic-roscpp
+Description: A multiplexer for command velocity inputs.
+ Arbitrates incoming cmd_vel messages from several topics, allowing one topic at a time to command the robot, based on priorities. It also deallocates current allowed topic if no messages are received after a configured timeout. All topics, together with their priority and timeout are configured through a YAML file, that can be reload at runtime.
