@@ -1,0 +1,13 @@
+Source: ros-kinetic-yocs-diff-drive-pose-controller
+Section: misc
+Priority: extra
+Maintainer: Marcus Liebhardt <marcus.liebhardt@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-ecl-threads, ros-kinetic-geometry-msgs, ros-kinetic-nodelet, ros-kinetic-pluginlib, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs, ros-kinetic-tf, ros-kinetic-yocs-controllers, ros-kinetic-yocs-math-toolkit
+Homepage: http://ros.org/wiki/yocs_diff_drive_pose_controller
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-yocs-diff-drive-pose-controller
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-ecl-threads, ros-kinetic-geometry-msgs, ros-kinetic-nodelet, ros-kinetic-pluginlib, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs, ros-kinetic-tf, ros-kinetic-yocs-controllers, ros-kinetic-yocs-math-toolkit
+Description: A controller for driving a differential drive base to a pose goal or along a path specified by multiple poses.
+ A pose consists of a 2D position (x,y) and a 1D orientation (theta).
