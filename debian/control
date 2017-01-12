@@ -1,0 +1,12 @@
+Source: ros-kinetic-yocs-ar-pair-tracking
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonl@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-ar-track-alvar-msgs, ros-kinetic-catkin, ros-kinetic-geometry-msgs, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs, ros-kinetic-yocs-ar-marker-tracking, ros-kinetic-yocs-math-toolkit, ros-kinetic-yocs-msgs
+Homepage: http://wiki.ros.org/yocs_ar_pair_tracking
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-yocs-ar-pair-tracking
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-ar-track-alvar-msgs, ros-kinetic-geometry-msgs, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-std-msgs, ros-kinetic-yocs-ar-marker-tracking, ros-kinetic-yocs-math-toolkit, ros-kinetic-yocs-msgs
+Description: The AR pair tracking package
