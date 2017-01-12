@@ -1,0 +1,13 @@
+Source: ros-kinetic-yocs-virtual-sensor
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonl@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-geometry-msgs, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-tf, ros-kinetic-yocs-math-toolkit, ros-kinetic-yocs-msgs
+Homepage: http://ros.org/wiki/yocs_virtual_sensor
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-yocs-virtual-sensor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-geometry-msgs, ros-kinetic-roscpp, ros-kinetic-rospy, ros-kinetic-rospy-message-converter, ros-kinetic-sensor-msgs, ros-kinetic-tf, ros-kinetic-visualization-msgs, ros-kinetic-yocs-math-toolkit, ros-kinetic-yocs-msgs
+Description: Virtual sensor that uses semantic map information to &quot;see&quot; obstacles undetectable by robot sensors.
+ Current implementation cannot read obstacles from YAML files. Until this feature gets implemented, we use auxiliary scripts to read and publish files' content. Data directory contains some example files.
