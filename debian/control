@@ -1,0 +1,12 @@
+Source: ros-kinetic-yocs-velocity-smoother
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonl@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-dynamic-reconfigure, ros-kinetic-ecl-threads, ros-kinetic-geometry-msgs, ros-kinetic-nav-msgs, ros-kinetic-nodelet, ros-kinetic-pluginlib, ros-kinetic-roscpp
+Homepage: http://ros.org/wiki/yocs_velocity_smoother
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-yocs-velocity-smoother
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-dynamic-reconfigure, ros-kinetic-ecl-threads, ros-kinetic-geometry-msgs, ros-kinetic-nav-msgs, ros-kinetic-nodelet, ros-kinetic-pluginlib, ros-kinetic-roscpp
+Description: Bound incoming velocity messages according to robot velocity and acceleration limits.
