@@ -1,3 +1,45 @@
+## yujin_ocs (kinetic) - 0.8.2-0
+
+The packages in the `yujin_ocs` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release --track kinetic --rosdistro kinetic yujin_ocs` on `Thu, 12 Jan 2017 15:37:33 -0000`
+
+These packages were released:
+- `yocs_ar_marker_tracking`
+- `yocs_ar_pair_approach`
+- `yocs_ar_pair_tracking`
+- `yocs_cmd_vel_mux`
+- `yocs_controllers`
+- `yocs_diff_drive_pose_controller`
+- `yocs_joyop`
+- `yocs_keyop`
+- `yocs_localization_manager`
+- `yocs_math_toolkit`
+- `yocs_navi_toolkit`
+- `yocs_navigator`
+- `yocs_rapps`
+- `yocs_safety_controller`
+- `yocs_velocity_smoother`
+- `yocs_virtual_sensor`
+- `yocs_waypoint_provider`
+- `yocs_waypoints_navi`
+- `yujin_ocs`
+
+Version of package(s) in repository `yujin_ocs`:
+
+- upstream repository: https://github.com/yujinrobot/yujin_ocs.git
+- release repository: https://github.com/yujinrobot-release/yujin_ocs-release.git
+- rosdistro version: `0.8.1-0`
+- old version: `0.8.1-0`
+- new version: `0.8.2-0`
+
+Versions of tools used:
+
+- bloom version: `0.5.23`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.5`
+- rosdistro version: `0.5.0`
+- vcstools version: `0.1.39`
+
+
 ## yujin_ocs (kinetic) - 0.8.1-0
 
 The packages in the `yujin_ocs` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release --track kinetic --rosdistro kinetic yujin_ocs` on `Fri, 17 Jun 2016 07:41:59 -0000`
