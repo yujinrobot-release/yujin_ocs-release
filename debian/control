@@ -1,0 +1,12 @@
+Source: ros-kinetic-yocs-navi-toolkit
+Section: misc
+Priority: extra
+Maintainer: Daniel Stonier <stonier@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-base-local-planner, ros-kinetic-catkin, ros-kinetic-costmap-2d, ros-kinetic-ecl-build, ros-kinetic-ecl-linear-algebra, ros-kinetic-nav-msgs, ros-kinetic-roscpp, ros-kinetic-tf
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-yocs-navi-toolkit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-base-local-planner, ros-kinetic-costmap-2d, ros-kinetic-ecl-build, ros-kinetic-ecl-linear-algebra, ros-kinetic-nav-msgs, ros-kinetic-roscpp, ros-kinetic-tf
+Description: Ros navigation utilities.
