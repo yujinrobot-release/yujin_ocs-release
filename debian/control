@@ -1,0 +1,13 @@
+Source: ros-melodic-yocs-waypoints-navi
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonl@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-actionlib, ros-melodic-actionlib-msgs, ros-melodic-catkin, ros-melodic-geometry-msgs, ros-melodic-move-base-msgs, ros-melodic-nav-msgs, ros-melodic-roscpp, ros-melodic-tf, ros-melodic-visualization-msgs, ros-melodic-yocs-math-toolkit, ros-melodic-yocs-msgs
+Homepage: http://ros.org/wiki/yocs_waypoints_navi
+Standards-Version: 3.9.2
+
+Package: ros-melodic-yocs-waypoints-navi
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-actionlib, ros-melodic-actionlib-msgs, ros-melodic-geometry-msgs, ros-melodic-move-base-msgs, ros-melodic-nav-msgs, ros-melodic-roscpp, ros-melodic-tf, ros-melodic-visualization-msgs, ros-melodic-yocs-math-toolkit, ros-melodic-yocs-msgs
+Description: Simple tool for waypoints navigation with two functions: * Command the robot to go to a goal by passing through a series of waypoints.
+ * Command the robot to constantly loop through a series of waypoints, useful for patrol.
