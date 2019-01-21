@@ -1,0 +1,12 @@
+Source: ros-melodic-yocs-keyop
+Section: misc
+Priority: extra
+Maintainer: Marcus Liebhardt <marcus.liebhardt@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-ecl-exceptions, ros-melodic-ecl-threads, ros-melodic-ecl-time, ros-melodic-geometry-msgs, ros-melodic-roscpp, ros-melodic-std-msgs
+Homepage: http://ros.org/wiki/yocs_keyop
+Standards-Version: 3.9.2
+
+Package: ros-melodic-yocs-keyop
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-ecl-exceptions, ros-melodic-ecl-threads, ros-melodic-ecl-time, ros-melodic-geometry-msgs, ros-melodic-roscpp, ros-melodic-std-msgs
+Description: Keyboard teleoperation for your robot
