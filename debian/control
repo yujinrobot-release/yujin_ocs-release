@@ -1,0 +1,13 @@
+Source: ros-melodic-yocs-virtual-sensor
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonl@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-geometry-msgs, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-tf, ros-melodic-yocs-math-toolkit, ros-melodic-yocs-msgs
+Homepage: http://ros.org/wiki/yocs_virtual_sensor
+Standards-Version: 3.9.2
+
+Package: ros-melodic-yocs-virtual-sensor
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-geometry-msgs, ros-melodic-roscpp, ros-melodic-rospy, ros-melodic-rospy-message-converter, ros-melodic-sensor-msgs, ros-melodic-tf, ros-melodic-visualization-msgs, ros-melodic-yocs-math-toolkit, ros-melodic-yocs-msgs
+Description: Virtual sensor that uses semantic map information to &quot;see&quot; obstacles undetectable by robot sensors.
+ Current implementation cannot read obstacles from YAML files. Until this feature gets implemented, we use auxiliary scripts to read and publish files' content. Data directory contains some example files.
