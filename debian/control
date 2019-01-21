@@ -1,0 +1,13 @@
+Source: ros-melodic-yocs-safety-controller
+Section: misc
+Priority: extra
+Maintainer: Marcus Liebhardt <marcus.liebhardt@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-ecl-threads, ros-melodic-geometry-msgs, ros-melodic-nodelet, ros-melodic-pluginlib, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-yocs-controllers
+Homepage: http://ros.org/wiki/yocsd_safety_controller
+Standards-Version: 3.9.2
+
+Package: ros-melodic-yocs-safety-controller
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-ecl-threads, ros-melodic-geometry-msgs, ros-melodic-nodelet, ros-melodic-pluginlib, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-yocs-controllers
+Description: A controller ensuring the safe operation of your robot.
+ The SafetyController listens to ranger readings in order to stop (and move back), if obstacles get to close. This controller can be enabled/disabled.
