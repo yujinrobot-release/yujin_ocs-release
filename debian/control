@@ -1,0 +1,12 @@
+Source: ros-melodic-yujin-ocs
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonl@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: http://ros.org/wiki/yujin_ocs
+Standards-Version: 3.9.2
+
+Package: ros-melodic-yujin-ocs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-yocs-cmd-vel-mux, ros-melodic-yocs-controllers, ros-melodic-yocs-diff-drive-pose-controller, ros-melodic-yocs-joyop, ros-melodic-yocs-keyop, ros-melodic-yocs-math-toolkit, ros-melodic-yocs-rapps, ros-melodic-yocs-safety-controller, ros-melodic-yocs-velocity-smoother, ros-melodic-yocs-virtual-sensor, ros-melodic-yocs-waypoints-navi
+Description: Yujin Robot's open-source control software
