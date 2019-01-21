@@ -1,0 +1,12 @@
+Source: ros-melodic-yocs-controllers
+Section: misc
+Priority: extra
+Maintainer: Marcus Liebhardt <marcus.liebhardt@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-roscpp
+Homepage: http://ros.org/wiki/yocs_controllers
+Standards-Version: 3.9.2
+
+Package: ros-melodic-yocs-controllers
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-roscpp
+Description: Library for various controller types and algorithms
