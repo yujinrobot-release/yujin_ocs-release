@@ -1,0 +1,13 @@
+Source: ros-melodic-yocs-diff-drive-pose-controller
+Section: misc
+Priority: extra
+Maintainer: Marcus Liebhardt <marcus.liebhardt@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-ecl-threads, ros-melodic-geometry-msgs, ros-melodic-nodelet, ros-melodic-pluginlib, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-tf, ros-melodic-yocs-controllers, ros-melodic-yocs-math-toolkit
+Homepage: http://ros.org/wiki/yocs_diff_drive_pose_controller
+Standards-Version: 3.9.2
+
+Package: ros-melodic-yocs-diff-drive-pose-controller
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-ecl-threads, ros-melodic-geometry-msgs, ros-melodic-nodelet, ros-melodic-pluginlib, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-tf, ros-melodic-yocs-controllers, ros-melodic-yocs-math-toolkit
+Description: A controller for driving a differential drive base to a pose goal or along a path specified by multiple poses.
+ A pose consists of a 2D position (x,y) and a 1D orientation (theta).
