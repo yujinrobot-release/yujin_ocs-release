@@ -1,0 +1,12 @@
+Source: ros-melodic-yocs-navigator
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonl@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-actionlib, ros-melodic-catkin, ros-melodic-move-base-msgs, ros-melodic-nav-msgs, ros-melodic-roscpp, ros-melodic-rospy, ros-melodic-tf, ros-melodic-yocs-math-toolkit, ros-melodic-yocs-msgs
+Homepage: http://wiki.ros.org/yocs_navigator
+Standards-Version: 3.9.2
+
+Package: ros-melodic-yocs-navigator
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-actionlib, ros-melodic-move-base-msgs, ros-melodic-nav-msgs, ros-melodic-roscpp, ros-melodic-rospy, ros-melodic-tf, ros-melodic-yocs-math-toolkit, ros-melodic-yocs-msgs
+Description: Navigation module for robots
