@@ -1,0 +1,13 @@
+Source: ros-melodic-yocs-math-toolkit
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonl@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-ecl-build, ros-melodic-ecl-config, ros-melodic-ecl-exceptions, ros-melodic-ecl-formatters, ros-melodic-ecl-linear-algebra, ros-melodic-geometry-msgs, ros-melodic-roscpp, ros-melodic-tf
+Homepage: http://ros.org/wiki/yocs_math_toolkit
+Standards-Version: 3.9.2
+
+Package: ros-melodic-yocs-math-toolkit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-ecl-build, ros-melodic-ecl-config, ros-melodic-ecl-exceptions, ros-melodic-ecl-formatters, ros-melodic-ecl-linear-algebra, ros-melodic-geometry-msgs, ros-melodic-roscpp, ros-melodic-tf
+Description: Math toolkit for Yujin open control system.
+ This package is intended to contain common use functions, mostly for simple mathematics but also for tf-related conversions. By no means it pretends to be an efficient and robust, widely used math library, but a play ground where to put common code that is typically repeated in many robot control programs.
