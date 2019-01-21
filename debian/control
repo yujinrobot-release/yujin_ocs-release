@@ -1,0 +1,12 @@
+Source: ros-melodic-yocs-navi-toolkit
+Section: misc
+Priority: extra
+Maintainer: Daniel Stonier <stonier@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-base-local-planner, ros-melodic-catkin, ros-melodic-costmap-2d, ros-melodic-ecl-build, ros-melodic-ecl-linear-algebra, ros-melodic-nav-msgs, ros-melodic-roscpp, ros-melodic-tf
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-yocs-navi-toolkit
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-base-local-planner, ros-melodic-costmap-2d, ros-melodic-ecl-build, ros-melodic-ecl-linear-algebra, ros-melodic-nav-msgs, ros-melodic-roscpp, ros-melodic-tf
+Description: Ros navigation utilities.
