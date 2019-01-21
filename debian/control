@@ -1,0 +1,12 @@
+Source: ros-melodic-yocs-joyop
+Section: misc
+Priority: extra
+Maintainer: Marcus Liebhardt <marcus.liebhardt@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-ecl-exceptions, ros-melodic-ecl-time, ros-melodic-geometry-msgs, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-yocs-msgs
+Homepage: http://ros.org/wiki/yocs_joop
+Standards-Version: 3.9.2
+
+Package: ros-melodic-yocs-joyop
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-ecl-exceptions, ros-melodic-ecl-time, ros-melodic-geometry-msgs, ros-melodic-joy, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-yocs-msgs
+Description: Joystick teleoperation for your robot robot core
