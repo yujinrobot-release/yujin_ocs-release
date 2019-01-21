@@ -1,0 +1,12 @@
+Source: ros-melodic-yocs-velocity-smoother
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonl@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-dynamic-reconfigure, ros-melodic-ecl-threads, ros-melodic-geometry-msgs, ros-melodic-nav-msgs, ros-melodic-nodelet, ros-melodic-pluginlib, ros-melodic-roscpp
+Homepage: http://ros.org/wiki/yocs_velocity_smoother
+Standards-Version: 3.9.2
+
+Package: ros-melodic-yocs-velocity-smoother
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-dynamic-reconfigure, ros-melodic-ecl-threads, ros-melodic-geometry-msgs, ros-melodic-nav-msgs, ros-melodic-nodelet, ros-melodic-pluginlib, ros-melodic-roscpp
+Description: Bound incoming velocity messages according to robot velocity and acceleration limits.
