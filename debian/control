@@ -1,0 +1,12 @@
+Source: ros-melodic-yocs-ar-pair-tracking
+Section: misc
+Priority: extra
+Maintainer: Jihoon Lee <jihoonl@yujinrobot.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-ar-track-alvar-msgs, ros-melodic-catkin, ros-melodic-geometry-msgs, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-yocs-ar-marker-tracking, ros-melodic-yocs-math-toolkit, ros-melodic-yocs-msgs
+Homepage: http://wiki.ros.org/yocs_ar_pair_tracking
+Standards-Version: 3.9.2
+
+Package: ros-melodic-yocs-ar-pair-tracking
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-ar-track-alvar-msgs, ros-melodic-geometry-msgs, ros-melodic-roscpp, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-yocs-ar-marker-tracking, ros-melodic-yocs-math-toolkit, ros-melodic-yocs-msgs
+Description: The AR pair tracking package
